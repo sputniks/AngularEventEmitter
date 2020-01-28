@@ -12,4 +12,8 @@ export class WidgetBComponent implements OnInit {
   ngOnInit() {
   }
 
+  showMessage(message) {
+    window.alert('The arg is debug window: ' + message);
+  }
+
 }

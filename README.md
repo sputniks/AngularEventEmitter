@@ -1,6 +1,37 @@
-# StackblitzEventEmitter
+# Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23 with
+```
+ng new frontend
+cd frontend
+npm install jqwidgets-ng
+ng serve
+
+```
+```
+ng generate component datagrid
+ng generate service http
+```
+Added to app.module.ts
+```
+import { CommonModule } from '@angular/common'
+import { jqxGridModule } from 'jqwidgets-ng/jqxgrid';
+import { jqxButtonModule } from 'jqwidgets-ng/jqxbuttons';
+import { HttpClientModule }    from '@angular/common/http';
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+
+    CommonModule, 
+    jqxGridModule, 
+    jqxButtonModule,
+    HttpClientModule,
+  ],
+
+```
+
+
 
 ## Development server
 
