@@ -1,22 +1,23 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  @ViewChild('widgetB', { static: false }) widget_b_view: Component;
+export class AppComponent implements OnInit {
+  @ViewChild('div_a', { static: false }) div_a: Component;
 
-  title = 'stackblitzEventEmitter';
+  onClick(event) {
+    console.log("...onClick() div_a:", this.div_a);
+  }
 
-  fetchEvent(event) {
-    console.log("...got event " + event);
-    console.log("...got widget_b_view: " + this.widget_b_view);
-    console.dir(this.widget_b_view);
+  constructor() {
+    console.log("...constructor() div_a:", this.div_a);
+  }
 
-    // this.widget_b_view.showMessage("MESSAGE");
-
+  ngOnInit() {
+    console.log("...ngOnInit() div_a:", this.div_a);
   }
 
 
